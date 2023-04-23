@@ -87,11 +87,23 @@ public class ControllerPermiso extends HttpServlet {
                 int id_rol = Integer.parseInt(request.getParameter("idrol"));
                 int fecha_crea = Integer.parseInt(request.getParameter("fecha_crea"));
                 int fecha_mod = Integer.parseInt(request.getParameter("fecha_mod"));
-                int usuario_crea = Integer.parseInt(request.getParameter("usuario_crea"));
-                int usuario_mod = Integer.parseInt(request.getParameter("usuario_mod"));
+                //int usuario_crea = Integer.parseInt(request.getParameter("usuario_crea"));
+                //int usuario_mod = Integer.parseInt(request.getParameter("usuario_mod"));
                 int activo = Integer.parseInt(request.getParameter("estado"));
-
                
+                String usuario_crea = request.getParameter("usuario_crea");
+                String usuario_mod = request.getParameter("usuario_mod");
+                
+
+                permiso.setId_rol(id_rol);
+                permiso.setId_modulo(id_modulo);
+                //permiso.s(id_rol);
+                permiso.setFecha_crea(fecha_crea);
+                permiso.setFecha_mod(fecha_mod);
+                permiso.setUsuario_crea(usuario_crea);
+                permiso.setUsuario_mod(usuario_mod);               
+                permiso.setActivo(activo);
+                
                 daoPermiso.insertar(permiso);
                 
                 acceso = listar;
@@ -108,10 +120,12 @@ public class ControllerPermiso extends HttpServlet {
                 id_rol = Integer.parseInt(request.getParameter("idrol"));
                 fecha_crea = Integer.parseInt(request.getParameter("fecha_crea"));
                 fecha_mod = Integer.parseInt(request.getParameter("fecha_mod"));
-                usuario_crea = Integer.parseInt(request.getParameter("usuario_crea"));
-                usuario_mod = Integer.parseInt(request.getParameter("usuario_mod"));
-                activo = Integer.parseInt(request.getParameter("activo"));
+                activo = Integer.parseInt(request.getParameter("estado"));
                 
+                 usuario_crea = request.getParameter("usuario_crea");
+                 usuario_mod = request.getParameter("usuario_mod");
+                
+                permiso.setId_rol(id_permiso);
                 permiso.setId_rol(id_rol);
                 permiso.setId_modulo(id_modulo);
                 permiso.setId_rol(id_rol);

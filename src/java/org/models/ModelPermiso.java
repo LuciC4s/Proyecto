@@ -15,14 +15,14 @@ public class ModelPermiso {
     private int id_rol;
     private int fecha_crea;
     private int fecha_mod;
-    private int usuario_crea;
-    private int usuario_mod;
+    private String usuario_crea;
+    private String usuario_mod;
     private int activo;
 
     public ModelPermiso() {
     }
 
-    public ModelPermiso(int id_permido, int id_modulo, int id_rol, int fecha_crea, int fecha_mod, int usuario_crea, int usuario_mod, int activo) {
+    public ModelPermiso(int id_permido, int id_modulo, int id_rol, int fecha_crea, int fecha_mod, String usuario_crea, String usuario_mod, int activo) {
         this.id_permido = id_permido;
         this.id_modulo = id_modulo;
         this.id_rol = id_rol;
@@ -73,19 +73,19 @@ public class ModelPermiso {
         this.fecha_mod = fecha_mod;
     }
 
-    public int getUsuario_crea() {
+    public String getUsuario_crea() {
         return usuario_crea;
     }
 
-    public void setUsuario_crea(int usuario_crea) {
+    public void setUsuario_crea(String usuario_crea) {
         this.usuario_crea = usuario_crea;
     }
 
-    public int getUsuario_mod() {
+    public String getUsuario_mod() {
         return usuario_mod;
     }
 
-    public void setUsuario_mod(int usuario_mod) {
+    public void setUsuario_mod(String usuario_mod) {
         this.usuario_mod = usuario_mod;
     }
 

@@ -19,15 +19,15 @@
                 <h1>Ingreso Permisos</h1>
 
                 <div class="form-group" >                      
-                    <input type="hidden" name="id_permido" >
+                    <input type="hidden" name="id_permiso" >
                     <div class="col-md-3">
                         <label class="control-label" for="id_modulo">Id modulo</label>
-                        <input name="id_modulo" class="form-control" placeholder="id_modulo" type="text" >
+                        <input name="idmodulo" class="form-control" placeholder="id_modulo" type="text" >
                     </div>
                     <br><br><br>
                     <div class="col-md-3">
                         <label class="control-label" for="id_rol">Id rol</label>
-                        <input name="id_rol" class="form-control" placeholder="id_rol" type="text" >
+                        <input name="idrol" class="form-control" placeholder="id_rol" type="text" >
                     </div>
                     <br><br><br>
                     <div class="col-md-3">

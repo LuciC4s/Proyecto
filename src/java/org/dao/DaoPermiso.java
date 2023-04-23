@@ -49,10 +49,10 @@ public class DaoPermiso  implements  CrudPermiso {
                 per.setId_rol(rs.getInt("ID_ROL"));
                 per.setFecha_crea(rs.getInt("FECHA_CREA"));
                 per.setFecha_mod(rs.getInt("FECHA_MOD"));
-                per.setUsuario_crea(rs.getInt("ID_ROL"));
+                //per.setUsuario_crea(rs.getString("ID_ROL"));
                 per.setFecha_crea(rs.getInt("FECHA_CREA"));
-                per.setUsuario_crea(rs.getInt("USUARIO_CREA"));
-                per.setUsuario_mod(rs.getInt("USUARIO_MOD"));          
+                per.setUsuario_crea(rs.getString("USUARIO_CREA"));
+                per.setUsuario_mod(rs.getString("USUARIO_MOD"));          
                 per.setActivo(rs.getInt("ACTIVO"));
                 lstPermiso.add(per);
             }
@@ -83,10 +83,10 @@ public class DaoPermiso  implements  CrudPermiso {
                 permiso.setId_rol(rs.getInt("ID_ROL"));
                 permiso.setFecha_crea(rs.getInt("FECHA_CREA"));
                 permiso.setFecha_mod(rs.getInt("FECHA_MOD"));
-                permiso.setUsuario_crea(rs.getInt("ID_ROL"));
+                //permiso.setUsuario_crea(rs.getString("ID_ROL"));
                 permiso.setFecha_crea(rs.getInt("FECHA_CREA"));
-                permiso.setUsuario_crea(rs.getInt("USUARIO_CREA"));
-                permiso.setUsuario_mod(rs.getInt("USUARIO_MOD"));          
+                permiso.setUsuario_crea(rs.getString("USUARIO_CREA"));
+                permiso.setUsuario_mod(rs.getString("USUARIO_MOD"));          
                 permiso.setActivo(rs.getInt("ACTIVO"));
                                                   
             }
