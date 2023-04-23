@@ -17,7 +17,7 @@ public class ModelUsuario {
     private String password;
     private int id_rol;
     private int fecha_crea;
-    private Boolean activo;
+    private int activo;
     private int fecha_mod;
     private String usuario_crea;
     private String usuario_mod;
@@ -26,7 +26,7 @@ public class ModelUsuario {
     public ModelUsuario() {
     }
 
-    public ModelUsuario(int id_usuario, String nombre, String apellido, String Usuario, String password, int id_rol, int fecha_crea, Boolean activo, int fecha_mod, String usuario_crea, String usuario_mod, int codigo) {
+    public ModelUsuario(int id_usuario, String nombre, String apellido, String Usuario, String password, int id_rol, int fecha_crea, int activo, int fecha_mod, String usuario_crea, String usuario_mod, int codigo) {
         this.id_usuario = id_usuario;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -97,11 +97,11 @@ public class ModelUsuario {
         this.fecha_crea = fecha_crea;
     }
 
-    public Boolean getActivo() {
+    public int getActivo() {
         return activo;
     }
 
-    public void setActivo(Boolean activo) {
+    public void setActivo(int activo) {
         this.activo = activo;
     }
 

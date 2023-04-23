@@ -29,7 +29,7 @@ public class DaoUsuario implements CrudUsuario{
     public List listar() {
         ArrayList<ModelUsuario> lstUsuario = new ArrayList<>();
          try {            
-            strSql = "SELECT * FROM USUARIO";
+            strSql = "SELECT * FROM USUARIOS";
             conexion.open();
             rs = conexion.executeQuery(strSql);                             
             
@@ -46,7 +46,7 @@ public class DaoUsuario implements CrudUsuario{
                 usu.setUsuario_mod(rs.getString("USUARIO_MOD"));
                 usu.setCodigo(rs.getInt("CODIGO"));
                 usu.setFecha_mod(rs.getInt("FECHA_MOD"));
-                usu.setActivo(rs.getBoolean("ACTIVO"));
+                usu.setActivo(rs.getInt("ACTIVO"));
                 lstUsuario.add(usu);
             }
             rs.close();
@@ -65,7 +65,7 @@ public class DaoUsuario implements CrudUsuario{
     public ModelUsuario list(int id) {
         ModelUsuario usuario = new ModelUsuario();
         try {            
-            strSql = "SELECT * FROM USUARIO WHERE ID_USUARIO =  " + id;
+            strSql = "SELECT * FROM USUARIOS WHERE ID_USUARIO =  " + id;
             conexion.open();
             rs = conexion.executeQuery(strSql);                             
             
@@ -82,7 +82,7 @@ public class DaoUsuario implements CrudUsuario{
                 usuario.setUsuario_mod(rs.getString("USUARIO_MOD"));
                 usuario.setCodigo(rs.getInt("CODIGO"));
                 usuario.setFecha_mod(rs.getInt("FECHA_MOD"));
-                usuario.setActivo(rs.getBoolean("ACTIVO"));
+                usuario.setActivo(rs.getInt("ACTIVO"));
                                                   
             }
             rs.close();
@@ -100,8 +100,8 @@ public class DaoUsuario implements CrudUsuario{
     @Override
     public boolean insertar(ModelUsuario usuario) {
         //Se prepara la sentencia SQL a ejecutar en la BD
-        strSql = "INSERT INTO USUARIO (ID_USUARIO, NOMBRE, APELLIDO, USUARIO, PASSWORD, ID_ROL, FECHA_CREA, USUARIO_CREA, USUARIO_MOD, CODIGO, FECHA_MOD, ACTIVO) "
-                + "VALUES ( (SELECT ISNULL(MAX(ID_USUARIO),0) + 1 FROM USUARIO), " +                   
+        strSql = "INSERT INTO USUARIOS (ID_USUARIO, NOMBRE, APELLIDO, USUARIO, PASSWORD, ID_ROL, FECHA_CREA, USUARIO_CREA, USUARIO_MOD, CODIGO, FECHA_MOD, ACTIVO) "
+                + "VALUES ( (SELECT ISNULL(MAX(ID_USUARIO),0) + 1 FROM USUARIOS), " +                   
                  "'" + usuario.getNombre()+ "', " +
                  "'" + usuario.getApellido()+ "', " +                
                 "'" + usuario.getUsuario()+ "', " +
@@ -135,7 +135,7 @@ public class DaoUsuario implements CrudUsuario{
     @Override
     public boolean modificar(ModelUsuario usuario) {
         //Se prepara la sentencia SQL a ejecutar en la BD
-        strSql = "UPDATE USUARIO "
+        strSql = "UPDATE USUARIOS "
                 + "SET  " +                   
                 "NOMBRE = '" + usuario.getNombre()+ "', " +
                 "APELLIDO = '" + usuario.getApellido()+ "', " +
@@ -170,7 +170,7 @@ public class DaoUsuario implements CrudUsuario{
     @Override
     public boolean eliminar(ModelUsuario usuario) {
         //Se prepara la sentencia SQL a ejecutar en la BD
-        strSql = "DELETE USUARIO WHERE ID_USUARIO = " + usuario.getId_usuario();
+        strSql = "DELETE USUARIOS WHERE ID_USUARIO = " + usuario.getId_usuario();
         
         try {
             //se abre una conexión hacia la BD

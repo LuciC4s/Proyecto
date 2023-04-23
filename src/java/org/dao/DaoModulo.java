@@ -153,15 +153,15 @@ public class DaoModulo implements CrudModulo {
                 + "SET  " +  
                 "NOMBRE = '" + modulo.getNombre()+ "', " +
                 "DESCRIPCION = '" + modulo.getDescripcion()+ "', " +                 
-                "PATH = " + modulo.getPath()+ ", " +       
-                "NIVEL = " + modulo.getNivel() + ", " +
-                "ORDEN = " + modulo.getOrden() + ", " +
-                "ID_MODULO_PADRE = " + modulo.getId_modulo_padre() + ", " +
-                "FECHA_CREA = " + modulo.getFecha_crea() + ", " +
-                "FECHA_MOD = " + modulo.getFecha_mod() + ", " +
-                "USUARIO_CREA = " + modulo.getUsuario_crea() + ", " +
-                "USUARIO_MOD = " + modulo.getUsuario_mod() + ", " +
-                "ACTIVO = " + modulo.getActivo()+ " " +                 
+                "PATH = '" + modulo.getPath()+ "', " +       
+                "NIVEL = '" + modulo.getNivel() + "', " +
+                "ORDEN = '" + modulo.getOrden() + "', " +
+                "ID_MODULO_PADRE = '" + modulo.getId_modulo_padre() + "', " +
+                "FECHA_CREA = '" + modulo.getFecha_crea() + "', " +
+                "FECHA_MOD = '" + modulo.getFecha_mod() + "', " +
+                "USUARIO_CREA = '" + modulo.getUsuario_crea() + "', " +
+                "USUARIO_MOD = '" + modulo.getUsuario_mod() + "', " +
+                "ACTIVO = '" + modulo.getActivo()+ " '" +                 
                 "WHERE ID_MODULO = " + modulo.getId_modulo();
         System.out.println("Modulo Modifica: " + strSql);
         try {

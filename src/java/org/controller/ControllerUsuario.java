@@ -87,7 +87,7 @@ public class ControllerUsuario extends HttpServlet {
                 usuario.setPassword(request.getParameter("password"));
                 usuario.setId_rol(Integer.parseInt(request.getParameter("idrol")));
                 usuario.setFecha_crea(Integer.parseInt(request.getParameter("fechacrea")));
-                usuario.setActivo(Boolean.parseBoolean(request.getParameter("estado")));
+                usuario.setActivo(Integer.parseInt(request.getParameter("estado")));
                 usuario.setFecha_mod(Integer.parseInt(request.getParameter("fechamod")));
                 usuario.setUsuario_crea(request.getParameter("usuariocrea"));
                 usuario.setUsuario_mod(request.getParameter("usuariomod"));
@@ -107,7 +107,7 @@ public class ControllerUsuario extends HttpServlet {
                 usuario.setPassword(request.getParameter("password"));
                 usuario.setId_rol(Integer.parseInt(request.getParameter("idrol")));
                 usuario.setFecha_crea(Integer.parseInt(request.getParameter("fechacrea")));
-                usuario.setActivo(Boolean.parseBoolean(request.getParameter("estado")));
+                usuario.setActivo(Integer.parseInt(request.getParameter("estado")));
                 usuario.setFecha_mod(Integer.parseInt(request.getParameter("fechamod")));
                 usuario.setUsuario_crea(request.getParameter("usuariocrea"));
                 usuario.setUsuario_mod(request.getParameter("usuariomod"));

@@ -1,8 +1,4 @@
-<%-- 
-    Document   : usuarioIngreso
-    Created on : 20/02/2023, 19:45:43
-    Author     : Usuario
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:include page="../plantillaIndex.jsp"/>
@@ -85,9 +81,8 @@
                     <div class="col-md-3">
                         <a class="btn btn-success btn-lg btn-block info" href="ControllerModulo?accion=read"  > Regresar</a>
                     </div>
-                </div>             
-            </div>
-        </form>
-    </div>
-</body>
+                </div>    
+            </form>
+        </div>
+    </body>
 </html>

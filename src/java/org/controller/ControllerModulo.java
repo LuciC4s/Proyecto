@@ -80,17 +80,18 @@ public class ControllerModulo extends HttpServlet {
                 acceso=add;
             break;
             case "create":
-                //modulo.setId_modulo(Integer.parseInt(request.getParameter("modulos")));
+                //modulo.setId_modulo(Integer.parseInt(request.getParameter("id_modulo")));
                 modulo.setNombre(request.getParameter("nombre"));
                 modulo.setDescripcion(request.getParameter("descripcion"));
                 modulo.setPath(request.getParameter("path"));
                 modulo.setNivel(Integer.parseInt(request.getParameter("nivel")));
+                modulo.setOrden(Integer.parseInt(request.getParameter("orden")));
                 modulo.setId_modulo_padre(Integer.parseInt(request.getParameter("idmodulopadre")));
                 modulo.setFecha_crea(Integer.parseInt(request.getParameter("fechacrea")));
                 modulo.setFecha_mod(Integer.parseInt(request.getParameter("fechamod")));                      
                 modulo.setUsuario_crea(request.getParameter("usuariocrea"));
                 modulo.setUsuario_mod(request.getParameter("usuariomod"));
-                modulo.setActivo(Integer.parseInt(request.getParameter("activo")));
+                modulo.setActivo(Integer.parseInt(request.getParameter("estado")));
                 daoModulo.insertar(modulo);
                 acceso = listar;
             break;
@@ -99,17 +100,18 @@ public class ControllerModulo extends HttpServlet {
                 acceso = edit;
             break;
             case "update" :
-                modulo.setId_modulo(Integer.parseInt(request.getParameter("modulos")));
+//                modulo.setId_modulo(Integer.parseInt(request.getParameter("id_modulo")));
                 modulo.setNombre(request.getParameter("nombre"));
                 modulo.setDescripcion(request.getParameter("descripcion"));
                 modulo.setPath(request.getParameter("path"));
                 modulo.setNivel(Integer.parseInt(request.getParameter("nivel")));
+                modulo.setOrden(Integer.parseInt(request.getParameter("orden")));
                 modulo.setId_modulo_padre(Integer.parseInt(request.getParameter("idmodulopadre")));
                 modulo.setFecha_crea(Integer.parseInt(request.getParameter("fechacrea")));
                 modulo.setFecha_mod(Integer.parseInt(request.getParameter("fechamod")));                      
                 modulo.setUsuario_crea(request.getParameter("usuariocrea"));
                 modulo.setUsuario_mod(request.getParameter("usuariomod"));
-                 modulo.setActivo(Integer.parseInt(request.getParameter("activo")));
+                 modulo.setActivo(Integer.parseInt(request.getParameter("estado")));
                 
                 daoModulo.modificar(modulo);
                 acceso = listar;                
@@ -124,7 +126,7 @@ public class ControllerModulo extends HttpServlet {
                 request.setAttribute("idMod", request.getParameter("input"));
                 List<ModelModulo> lista=daoModulo.search(busqueda);
                 request.setAttribute("datos", lista);
-                request.getRequestDispatcher("Modulo/moduloSearch.jsp").forward(request, response);
+                request.getRequestDispatcher("Modulo/searchModulo.jsp").forward(request, response);
                 
             break;
         }

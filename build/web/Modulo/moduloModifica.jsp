@@ -5,8 +5,6 @@
 --%>
 <%@page import="org.models.ModelModulo"%>
 <%@page import="org.dao.DaoModulo"%>
-<%@page import="org.models.ModelUsuario"%>
-<%@page import="org.dao.DaoUsuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:include page="../plantillaIndex.jsp"/>
 <!DOCTYPE html>
@@ -17,7 +15,7 @@
     </head>
     <body>
         <div class="container">
-            <form id="form-work" class="" name="form-work" action="ControllerUsuario" method="get">
+            <form id="form-work" class="" name="form-work" action="ControllerModulo" method="get">
                 <h1>Modifica Modulo</h1>
                 <div class="form-group" >  
                     <%
@@ -36,47 +34,47 @@
                     <br><br><br>
                     <div class="col-md-3">
                         <label class="control-label" for="Descripcion">Descripcion</label>
-                        <input name="Descripcion" class="form-control" placeholder="Descripcion" type="text" value ="<%= modulo.getDescripcion()%>">
+                        <input name="descripcion" class="form-control" placeholder="Descripcion" type="text" value ="<%= modulo.getDescripcion()%>">
                     </div>
                     <br><br><br>
                     <div class="col-md-3">
                         <label class="control-label" for="Path">Path</label>
-                        <input name="Path" class="form-control" placeholder="Path" type="text" value="<%= modulo.getPath()%>">
+                        <input name="path" class="form-control" placeholder="Path" type="text" value="<%= modulo.getPath()%>">
                     </div>
                     <br><br><br>
                     <div class="col-md-3">
                         <label class="control-label" for="password">Nivel</label>
-                        <input name="Nivel" class="form-control" placeholder="Nivel" type="text" value="<%= modulo.getNivel()%>">
+                        <input name="nivel" class="form-control" placeholder="Nivel" type="text" value="<%= modulo.getNivel()%>">
                     </div>
                     <br><br><br>
                     <div class="col-md-3">
                         <label class="control-label" for="id rol">Orden</label>
-                        <input name="Orden" class="form-control" placeholder="Orden" type="text" value="<%= modulo.getOrden()%>">
+                        <input name="orden" class="form-control" placeholder="Orden" type="text" value="<%= modulo.getOrden()%>">
                     </div>
                     <br><br><br>
                     <div class="col-md-3">
                         <label class="control-label" for="id rol">Modulo_padre</label>
-                        <input name="Id_modulo_padre" class="form-control" placeholder="Modulo_padre" type="text" value="<%= modulo.getId_modulo_padre()%>">
+                        <input name="idmodulopadre" class="form-control" placeholder="Modulo_padre" type="text" value="<%= modulo.getId_modulo_padre()%>">
                     </div>
                     <br><br><br>
                     <div class="col-md-3">
                         <label class="control-label" for="Fecha Creacion">Fecha Creacion</label>
-                        <input name="password" class="form-control" placeholder="Fecha Creacion" type="text" value="<%= modulo.getFecha_crea()%>">
+                        <input name="fechacrea" class="form-control" placeholder="Fecha Creacion" type="text" value="<%= modulo.getFecha_crea()%>">
                     </div>
                     <br><br><br>
                     <div class="col-md-3">
                         <label class="control-label" for="Usuario Creacion">Usuario Creacion</label>
-                        <input name="password" class="form-control" placeholder="Usuario Creacion" type="text" value="<%= modulo.getUsuario_crea()%>">
+                        <input name="usuariocrea" class="form-control" placeholder="Usuario Creacion" type="text" value="<%= modulo.getUsuario_crea()%>">
                     </div>
                     <br><br><br>
                     <div class="col-md-3">
                         <label class="control-label" for="Fecha Modifica">Fecha Modifica</label>
-                        <input name="password" class="form-control" placeholder="Fecha Modifica" type="text" value="<%= modulo.getFecha_mod()%>">
+                        <input name="fechamod" class="form-control" placeholder="Fecha Modifica" type="text" value="<%= modulo.getFecha_mod()%>">
                     </div>
                     <br><br><br>
                     <div class="col-md-3">
                         <label class="control-label" for="Usuario Modifica">Usuario Modifica</label>
-                        <input name="password" class="form-control" placeholder="Usuario Modifica" type="text" value="<%= modulo.getUsuario_mod()%>">
+                        <input name="usuariomod" class="form-control" placeholder="Usuario Modifica" type="text" value="<%= modulo.getUsuario_mod()%>">
                     </div>
                     <br><br><br>
                     <div class="col-md-3">
@@ -93,7 +91,7 @@
                         <button type="submit" name="accion" value="update" class="btn btn-success btn-lg btn-block info">Actualizar</button>
                     </div>
                     <div class="col-md-3">
-                        <a class="btn btn-success btn-lg btn-block info" href="ControllerUsuario?accion=read"  > Regresar</a>
+                        <a class="btn btn-success btn-lg btn-block info" href="ControllerModulo?accion=read"  > Regresar</a>
                     </div>
                 </div>
             </form>

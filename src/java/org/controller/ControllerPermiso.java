@@ -89,15 +89,8 @@ public class ControllerPermiso extends HttpServlet {
                 int fecha_mod = Integer.parseInt(request.getParameter("fecha_mod"));
                 int usuario_crea = Integer.parseInt(request.getParameter("usuario_crea"));
                 int usuario_mod = Integer.parseInt(request.getParameter("usuario_mod"));
-                int activo = Integer.parseInt(request.getParameter("activo"));
+                int activo = Integer.parseInt(request.getParameter("estado"));
 
-                permiso.setId_modulo(id_modulo);
-                permiso.setId_rol(id_rol);
-                permiso.setFecha_crea(fecha_crea);
-                permiso.setFecha_mod(fecha_mod);
-                permiso.setUsuario_crea(usuario_crea);
-                permiso.setUsuario_mod(usuario_mod);
-                permiso.setActivo(activo);
                
                 daoPermiso.insertar(permiso);
                 
